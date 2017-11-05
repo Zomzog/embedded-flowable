@@ -12,12 +12,9 @@ spring:
     database: H2
     show-sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     properties:
       hibernate.id.new_generator_mappings: true
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: true
 
-liquibase:
-  change-log: classpath:config/liquibase/master.xml
-  contexts: dev
