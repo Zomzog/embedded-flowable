@@ -45,9 +45,8 @@ public class PonyControllerTest {
                 .build();
     }
 
-    @Deployment
     @Test
-    public void sayHelloTest() throws Exception {
+    public void sayHello() throws Exception {
         // Init
         Pony pony = new Pony("Daring Do");
         pony = ponyRepository.save(pony);
@@ -60,9 +59,8 @@ public class PonyControllerTest {
         ponyRepository.delete(pony.getId());
     }
 
-    @Deployment
     @Test
-    public void sayEeyupTest() throws Exception {
+    public void sayEeyup() throws Exception {
         // Init
         Pony pony = new Pony("Big McIntosh");
         pony = ponyRepository.save(pony);

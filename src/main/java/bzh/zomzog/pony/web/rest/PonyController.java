@@ -32,7 +32,9 @@ public class PonyController {
         Map<String, Object> variables = new HashMap<>();
         variables.put("ponyId", ponyId);
         final ProcessInstance process = runtimeService.startProcessInstanceByKey("sayHello", variables);
-        final HistoricVariableInstance hvi = historyService.createHistoricVariableInstanceQuery().processInstanceId(process.getId()).variableName("result").singleResult();
+        final HistoricVariableInstance hvi = historyService.createHistoricVariableInstanceQuery()
+                .processInstanceId(process.getId())
+                .variableName("result").singleResult();
         Message message = (Message) hvi.getValue();
         return ResponseEntity.ok(message);
     }

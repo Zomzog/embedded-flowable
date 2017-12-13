@@ -1,12 +1,10 @@
 package bzh.zomzog.pony.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 /**
@@ -22,8 +20,6 @@ public class Pony implements Serializable  {
     private Long id;
 
     @NotNull
-    @Size(min = 1, max = 256)
-    @Column(name = "name", length = 256, nullable = false)
     private String name;
 
     public Pony(String name){
