@@ -1,0 +1,9 @@
+image:https://travis-ci.org/Zomzog/embedded-flowable.svg?branch=master["Build Status", link="https://travis-ci.org/Zomzog/embedded-flowable"]
+
+Code exemple for :
+http://zomzog.fr/2017/11/springboot-embeded-flowable/[Springboot emveded flowable]
+
+== Building from Source
+----
+	$ ./mvnw clean install
+----
